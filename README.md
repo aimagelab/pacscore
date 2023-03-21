@@ -3,7 +3,7 @@ This repository contains the reference code for the paper "Positive-Augmented Co
 
 Please cite with the following BibTeX:
 ```
-@inproceedings{cornia2020m2,
+@inproceedings{sarto2023positive,
   title={{Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation}},
   author={Sarto, Sara and Barraco, Manuele and Cornia, Marcella and Baraldi, Lorenzo and Cucchiara, Rita},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
