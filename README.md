@@ -15,6 +15,8 @@ Please cite with the following BibTeX:
   <img src="images/model.png" alt="PACS" width="820" />
 </p> 
 
+Try out the [Web demo](https://ailb-web.ing.unimore.it/pacscore), integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). 
+
 ## Environment Setup
 Clone the repository and create the ```pacs``` conda environment using the ```environment.yml``` file:
 
