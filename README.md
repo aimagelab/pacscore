@@ -1,5 +1,5 @@
 # Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation
-This repository contains the reference code for the paper "Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation" (CVPR 2023).
+This repository contains the reference code for the paper (Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation)[https://arxiv.org/abs/2303.12112] (CVPR 2023 Highlight).
 
 Please cite with the following BibTeX:
 ```
