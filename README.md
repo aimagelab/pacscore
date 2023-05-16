@@ -1,5 +1,14 @@
-# Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation
-This repository contains the reference code for the paper [Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation](https://arxiv.org/abs/2303.12112) (CVPR 2023 Highlight).
+<div align="center">
+  <h1>Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation (CVPR 2023) </h1>
+
+
+<a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
+[![Conference](https://img.shields.io/badge/CVPR-2023(Highlight)-f9f107.svg)](https://openaccess.thecvf.com/content/CVPR2023/html/Sarto_Positive-Augmented_Contrastive_Learning_for_Image_and_Video_Captioning_Evaluation_CVPR_2023_paper.html)
+[![Paper](https://img.shields.io/badge/Paper-arxiv.2303.12112-B31B1B.svg)](https://arxiv.org/abs/2303.12112)
+  
+</div>
+
+This repository contains the reference code for the paper [Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation](https://arxiv.org/abs/2303.12112), **CVPR 2023 Highlight✨** (top 2.5% of initial submissions and top 10% of accepted papers).
 
 Please cite with the following BibTeX:
 ```
