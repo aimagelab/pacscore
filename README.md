@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation (CVPR 2023) </h1>
+  <h1>PAC-Score: Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation (CVPR 2023) </h1>
 
 
 <a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
