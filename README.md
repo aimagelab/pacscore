@@ -8,7 +8,9 @@
   
 </div>
 
-This repository contains the reference code for the paper [Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation](https://arxiv.org/abs/2303.12112), **CVPR 2023 Highlight✨** (top 2.5% of initial submissions and top 10% of accepted papers).
+This repository contains the reference code for the main paper and its extension:
+* [Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation](https://arxiv.org/abs/2303.12112), **CVPR 2023 Highlight✨** (top 2.5% of initial submissions and top 10% of accepted papers). 
+* [Positive-Augmented Contrastive Learning for Vision-and-Language Evaluation and Training](), currently under submission. 
 
 Please cite with the following BibTeX:
 ```
@@ -17,6 +19,14 @@ Please cite with the following BibTeX:
   author={Sarto, Sara and Barraco, Manuele and Cornia, Marcella and Baraldi, Lorenzo and Cucchiara, Rita},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   year={2023}
+}
+```
+```
+@inproceedings{sarto2024positive,
+  title={{Positive-Augmented Contrastive Learning for Vision-and-Language Evaluation and Training}},
+  author={Sarto, Sara and Nicholas, Moratelli and Cornia, Marcella and Baraldi, Lorenzo and Cucchiara, Rita},
+  booktitle={arxiv},
+  year={2024}
 }
 ```
 
@@ -35,15 +45,51 @@ conda env create -f environment.yml
 conda activate pacs
 ```
 
-## Loading CLIP Models and Data Preparation
+## Loading CLIP Models
+
 Checkpoints of different backbones are available at [this link](https://drive.google.com/drive/folders/15Da_nh7CYv8xfryIdETG6dPFSqcBiqpd?usp=sharing).
 
 Once you have downloaded the checkpoints, place them under the ```checkpoints/``` folder.
 
-| **Backbone**       | **Checkpoint**         |
-| -------------- | -------------      |
-| **CLIP ViT-B-32**  | clip_ViT-B-32.pth  |
-| **OpenCLIP ViT-L-14**  |  openClip_ViT-L-14.pth |
+<table style="border-collapse: collapse; width: auto; border: none;">
+  <tr>
+    <td style="padding: 0; border: none;">
+      <table style="border-collapse: collapse; width: auto; border: none;">
+        <tr>
+          <td rowspan="2" style="border: none;"><b>PAC-S</b></td>
+          <td style="border: none;"><b>CLIP ViT-B/32</b></td>
+          <td style="border: none;">
+            <a href="https://drive.google.com/file/d/1F-0Pma-vfJPAiDzeyl-iEdSXZIO1cDae/view?usp=drive_link" target="_blank">clip_ViT-B-32.pth</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="border: none;"><b>OpenCLIP ViT-L/14</b></td>
+          <td style="border: none;">  
+          <a href="https://drive.google.com/file/d/1F-0Pma-vfJPAiDzeyl-iEdSXZIO1cDae/view?usp=drive_link" target="_blank">openClip_ViT-L-14.pth</a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="border: none;"><b>PAC-S++</b></td>
+          <td style="border: none;"><b>CLIP ViT-B/32</b></td>
+          <td style="border: none;">PAC++_clip_ViT-B-32.pth</td>
+        </tr>
+        <tr>
+          <td style="border: none;"><b>CLIP ViT-L/14</b></td>
+          <td style="border: none;">PAC++_clip_ViT-L-14.pth</td>
+        </tr>
+      </table>
+    </td>
+    <td style="padding: 0; border: none;">
+      <img src="images/radar_new.png" alt="Model Image" width="360" style="display: block; border: none;"/>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+## Data Preparation
 
 An example set of inputs, including a candidate json, image directory, and references json is provided in this repository under ```example/```. The input files are formatted as follows.
 
@@ -69,13 +115,16 @@ The references json should be a dictionary that maps from {"image_identifier": [
         "A white dog rests its head on the patio bricks ."
     ]}
 ```
-## Quick Start: Compute PAC-S
+
+## Compute PAC-S
 
 Run ```python -u compute_metrics.py``` to obtain standard captioning metrics (_e.g._ BLEU, METEOR, etc.) and PAC-S.
 
 To compute RefPAC-S run ```python -u compute_metrics.py --compute_refpac```.
 
 The default backbone used is the CLIP ViT-B-32 model. To use a different backcbone (_e.g._ OpenCLIP ViT-L/14 backbone) specify in the command input ```--clip_model open_clip_ViT-L/14```. 
+
+To try the enhanced version, PAC++, you can follow these instructions. 
 
 ```
 BLEU-1: 0.6400
@@ -133,3 +182,12 @@ PAC-S    Kendall Tau-b: 36.037    Kendall Tau-c: 18.628
 ```
 
 For the reference based version of the PACScore, add ```--compute_refpac```.
+
+## Compute PAC-S++
+
+Run ```python -u compute_correlations_pac++.py``` to compute correlation scores on **Flickr8k-Expert** and **Flickr8k-CF** datasets. 
+
+For the reference based version of the PACScore++, add ```--compute_refpac```.
+
+
+
