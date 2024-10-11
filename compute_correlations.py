@@ -16,7 +16,7 @@ _MODELS = {
     "open_clip_ViT-L/14": "checkpoints/openClip_ViT-L-14.pth"
 }
 
-def compute_correlation_scores(dataloader, model, preprocess, args):
+def compute_correlation_scores(dataloader, model, preprocess, args, device):
     gen = {}
     gts = {}
 
@@ -65,7 +65,7 @@ def compute_correlation_scores(dataloader, model, preprocess, args):
               % (k, kendalltau_b, kendalltau_c))
 
 
-def compute_scores(model, preprocess, args):
+def compute_scores(model, preprocess, args, device):
     args.datasets = ['flickr8k_expert', 'flickr8k_cf'] 
 
     args.batch_size_compute_score = 10
@@ -78,8 +78,7 @@ def compute_scores(model, preprocess, args):
             dataset = Flickr8k(json_file='crowdflower_flickr8k.json')
             dataloader = DataLoader(dataset, batch_size=args.batch_size_compute_score, shuffle=False, collate_fn=collate_fn)
 
-        compute_correlation_scores(dataloader, model, preprocess, args)
-
+        compute_correlation_scores(dataloader, model, preprocess, args, device)
 
 
 if __name__ == '__main__':
@@ -107,5 +106,5 @@ if __name__ == '__main__':
     model.load_state_dict(checkpoint['state_dict'])
     model.eval()
 
-    compute_scores(model, preprocess, args)
+    compute_scores(model, preprocess, args, device)
     
