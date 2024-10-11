@@ -10,7 +10,7 @@
 
 This repository contains the reference code for the main paper and its extension:
 * [Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation](https://arxiv.org/abs/2303.12112), **CVPR 2023 Highlight✨** (top 2.5% of initial submissions and top 10% of accepted papers). 
-* [Positive-Augmented Contrastive Learning for Vision-and-Language Evaluation and Training](), currently under submission. 
+* [Positive-Augmented Contrastive Learning for Vision-and-Language Evaluation and Training](https://arxiv.org/abs/2410.07336), currently under submission. 
 
 Please cite with the following BibTeX:
 ```
