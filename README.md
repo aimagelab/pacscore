@@ -71,11 +71,15 @@ Once you have downloaded the checkpoints, place them under the ```checkpoints/``
         <tr>
           <td rowspan="2" style="border: none;"><b>PAC-S++</b></td>
           <td style="border: none;"><b>CLIP ViT-B/32</b></td>
-          <td style="border: none;">PAC++_clip_ViT-B-32.pth</td>
+          <td style="border: none;">
+            <a href="https://ailb-web.ing.unimore.it/publicfiles/pac++/PAC++_clip_ViT-B-32.pth" target="_blank">PAC++_clip_ViT-B-32.pth</a>
+          </td>
         </tr>
         <tr>
           <td style="border: none;"><b>CLIP ViT-L/14</b></td>
-          <td style="border: none;">PAC++_clip_ViT-L-14.pth</td>
+          <td style="border: none;">
+            <a href="https://ailb-web.ing.unimore.it/publicfiles/pac++/PAC++_clip_ViT-L-14.pth" target="_blank">PAC++_clip_ViT-L-14.pth</a>
+          </td>
         </tr>
       </table>
     </td>
